@@ -2,6 +2,11 @@
   <div class="col">
     <h3>Signals</h3>
     <hr>
+    <p>Count: {{ count() }}  </p>
+    <p>Count2: {{ count2() }}  </p>
+    <hr>
+    <p>Double Count: {{ doubleCount() }}  </p>
+    <p>Count1 + Count2: {{ count1PlusCount2() }}  </p>
 
 
   </div>
@@ -9,9 +14,23 @@
   <div class="col">
     <h3>RxJs</h3>
     <hr>
+    <p>Count: {{ count$ | async }}  </p>
+    <p>Count2: {{ count2$ | async }}  </p>
+    <p>Value: {{ count$.value }}  </p>
+    <p>GetValue: {{ count$.getValue() }}  </p>
+    <hr>
+    <p>DoubleCount {{ doubleCount$ | async }}</p>
+    <p>Count1 + Count2: {{ count1PlusCount2$ | async }}  </p>
 
-
-
+    <p>Count1 + Count 2 {{ count1PlusCount2$ | async }}</p>
+    <p>Count1 + Count 2 {{ count1PlusCount2$ | async }}</p>
+    <p>Count1 + Count 2 {{ count1PlusCount2$ | async }}</p>
+    <p>Count1 + Count 2 {{ count1PlusCount2$ | async }}</p>
 
   </div>
 </div>
+
+
+<button (click)="triggerChanges()">
+  Cambiar
+</button>
