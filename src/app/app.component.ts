@@ -1,4 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +14,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'signalsDemo';
+
+
+
 }
