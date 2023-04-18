@@ -1,13 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-interface User {
-  id: number;
-  name: string;
-  email: string;
-}
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,8 +12,13 @@ export class AppComponent {
   public count = signal(10);
 
 
+
+
   // RXJS
   public count$ = new BehaviorSubject(10);
+
+
+
 
 
 }
